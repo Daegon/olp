@@ -1,0 +1,21 @@
+olp_db:
+    image: mysql:5.7
+    ports:
+        - 3307:3306
+    environment:
+        MYSQL_ROOT_PASSWORD: root
+        MYSQL_DATABASE: olp
+olp_php:
+    build: ./php-fpm
+    volumes:
+        - ../:/var/www
+    links:
+        - olp_db
+olp_nginx:
+    build: ./nginx
+    ports:
+        - 8000:80
+    links:
+        - olp_php
+    volumes_from:
+        - olp_php

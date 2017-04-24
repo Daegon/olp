@@ -1,0 +1,3 @@
+
+# example `bin/go php` -> `docker-compose exec olp_php bash`
+docker-compose exec olp_$1 bash
