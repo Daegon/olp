@@ -1,0 +1,10 @@
+{% extends 'AppBundle::base.html.twig' %}
+
+{% block content %}
+    <div id="characteristics" data-characteristics="{{ characteristics|serialize }}"
+         data-attributes="{{ attributes|serialize }}"></div>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('assets/js/characteristics.js') }}"></script>
+{% endblock %}

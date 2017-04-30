@@ -6,7 +6,8 @@ var gulp = require('gulp'),
     babelify = require('babelify'),
     browserify = require('browserify'),
     watchify = require('gulp-watchify'),
-    cssmin = require('gulp-cssmin');
+    cssmin = require('gulp-cssmin'),
+    rename = require("gulp-rename");
 
 var baseDirs = {
     src: 'src/AppBundle/Resources/assets/',
@@ -19,7 +20,7 @@ var paths = {
         out: baseDirs.assets + 'css/'
     },
     scripts: {
-        js: baseDirs.src + 'scripts/*.js',
+        js: baseDirs.src + 'scripts/entries/*.jsx',
         out: baseDirs.assets + 'js/'
     }
 };
@@ -42,6 +43,8 @@ gulp.task('browserify', watchify(function (watchify) {
     return gulp.src(paths.scripts.js)
         .pipe(watchify({
             watch: watching,
+            cache: {},
+            packageCache: {},
             setup: function (bundle) {
                 bundle
                     .transform(babelify, {
@@ -55,6 +58,9 @@ gulp.task('browserify', watchify(function (watchify) {
             }
         }))
         .pipe(streamify(uglify()))
+        .pipe(rename({
+            extname: '.js'
+        }))
         .pipe(gulp.dest(paths.scripts.out))
 }));
 
