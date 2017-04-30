@@ -4,7 +4,8 @@
   "description": "Olp",
   "scripts": {
     "watch": "gulp watch",
-    "build": "gulp build"
+    "build": "gulp build",
+    "postinstall": "gulp build"
   },
   "dependencies": {
     "axios": "^0.16.1",
@@ -23,6 +24,7 @@
     "gulp-streamify": "^1.0.2",
     "gulp-uglify": "^2.1.2",
     "gulp-watchify": "^0.6.0",
+    "highcharts": "^5.0.10",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "watchify": "^3.9.0"

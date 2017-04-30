@@ -20,8 +20,7 @@ class CharacteristicController extends Controller
      */
     public function indexAction(Request $request)
     {
-        // todo remove extra queries
-        $characteristics = $this->getDoctrine()->getRepository(Characteristic::class)->findAll();
+        $characteristics = $this->getDoctrine()->getRepository(Characteristic::class)->findTopLevelWithAttributes();
         $attributes = $this->getDoctrine()->getRepository(Attribute::class)->findWithCharacteristics();
 
         return $this->render('AppBundle:characteristic:index.html.twig', compact('characteristics', 'attributes'));
