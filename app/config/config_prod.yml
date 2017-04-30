@@ -19,3 +19,12 @@ monolog:
             level: debug
         console:
             type: console
+
+doctrine:
+    dbal:
+        driver: pdo_mysql
+        host: sql8.freemysqlhosting.net
+        port: 3306
+        dbname: sql8171995
+        user: sql8171995
+        password: hVWHq1Le9W
