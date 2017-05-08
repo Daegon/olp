@@ -93,7 +93,8 @@ export default class extends React.Component {
                                                     <input type="checkbox"
                                                            onChange={this.attributeCheckboxChangeHandler.bind(this, attribute)}
                                                            checked={this.isAttributeChecked(attribute)}/>
-                                                    {attribute.name}
+                                                    {attribute.name} {' '}
+                                                    {attribute.characteristics.length}/{this.props.attributes.length}
                                                 </label>
                                             </div>
                                         })}

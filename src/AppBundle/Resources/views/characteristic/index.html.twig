@@ -1,8 +1,8 @@
 {% extends 'AppBundle::base.html.twig' %}
 
 {% block content %}
-    <div id="characteristics" data-characteristics="{{ characteristics|serialize }}"
-         data-attributes="{{ attributes|serialize }}"></div>
+    <div id="characteristics" data-characteristics="{{ characteristics|serialize('json', contextFactory.context) }}"
+         data-attributes="{{ attributes|serialize('json', contextFactory.context) }}"></div>
 {% endblock %}
 
 {% block javascripts %}
