@@ -23,8 +23,8 @@ monolog:
 doctrine:
     dbal:
         driver: pdo_mysql
-        host: sql8.freemysqlhosting.net
+        host: zimm.mysql.ukraine.com.ua
         port: 3306
-        dbname: sql8171995
-        user: sql8171995
-        password: hVWHq1Le9W
+        dbname: zimm_olp
+        user: zimm_olp
+        password: 2539djp6
