@@ -26,7 +26,11 @@ var paths = {
 };
 
 gulp.task('styles', function () {
-    return gulp.src([paths.styles.scss, 'node_modules/bootstrap/dist/css/bootstrap.min.css'])
+    return gulp.src([
+        'node_modules/bootstrap/dist/css/bootstrap.min.css',
+        'node_modules/bootstrap-material-design/dist/css/bootstrap-material-design.css',
+        paths.styles.scss
+    ])
         .pipe(sass())
         .pipe(autoprefixer('last 3 versions'))
         .pipe(cssmin())

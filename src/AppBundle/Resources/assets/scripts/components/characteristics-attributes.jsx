@@ -80,11 +80,11 @@ export default class extends React.Component {
         return (
             <div>
                 {this.topLevelCharacteristics().map((characteristic) => {
-                    return <div className="panel panel-default" key={characteristic.id}>
+                    return <div className="panel panel-primary" key={characteristic.id}>
                         <div className="panel-heading">{characteristic.name}</div>
                         <div className="panel-body">
                             {characteristic.children.map((child) => {
-                                return <div className="panel panel-default" key={child.id}>
+                                return <div className="panel panel-info" key={child.id}>
                                     <div className="panel-heading">{child.name}</div>
                                     <div className="panel-body">
                                         {child.attributes.map((attribute) => {
@@ -105,7 +105,7 @@ export default class extends React.Component {
                     </div>
                 })}
 
-                <div className="panel panel-default">
+                <div className="panel panel-primary">
                     <div className="panel-heading">Графік</div>
                     <div className="panel-body">
                         <div id="chart"></div>
