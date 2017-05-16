@@ -76,6 +76,12 @@ export default class extends React.Component {
         });
     }
 
+    attributesRelationsCount() {
+        return this.props.characteristics.map((characteristic) => {
+            return characteristic.attributes.length;
+        }).reduce((a, b) => a + b);
+    }
+
     render() {
         return (
             <div>
@@ -94,7 +100,7 @@ export default class extends React.Component {
                                                            onChange={this.attributeCheckboxChangeHandler.bind(this, attribute)}
                                                            checked={this.isAttributeChecked(attribute)}/>
                                                     {attribute.name} {' '}
-                                                    {attribute.characteristics.length}/{this.props.attributes.length}
+                                                    {attribute.characteristics.length}/{this.attributesRelationsCount()}
                                                 </label>
                                             </div>
                                         })}
