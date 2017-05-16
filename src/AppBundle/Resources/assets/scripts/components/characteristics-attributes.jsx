@@ -16,17 +16,17 @@ export default class extends React.Component {
                 type: 'column'
             },
             yAxis: {
-                title: 'Повторюваність',
+                title: 'Frequency',
             },
             xAxis: {
-                title: 'Атрибути',
+                title: 'Attributes',
                 type: "category"
             },
             title: {
-                text: 'Атрибути'
+                text: 'Attributes'
             },
             series: [{
-                name: 'Повторюваність',
+                name: 'Frequency',
                 data: this.getAttributesSeries()
             }]
         });
@@ -106,7 +106,7 @@ export default class extends React.Component {
                 })}
 
                 <div className="panel panel-primary">
-                    <div className="panel-heading">Графік</div>
+                    <div className="panel-heading">Quality diagram</div>
                     <div className="panel-body">
                         <div id="chart"></div>
                     </div>
