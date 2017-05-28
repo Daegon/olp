@@ -154,17 +154,14 @@ class LoadCharacteristicsData implements FixtureInterface
             'UserErrorProtection' => [
                 'NumberOfUnsuccessfullyRecoveredSituation',
                 'NumberOfUserErrorsOrChanges',
-                'OperationTime',
-                'PeriodDuringObservation',
+                'OperationTimePeriodDuringObservation',
                 'NumberOfOccurrencesOfUser\'sHumanErrorOperation',
                 'NumberOfInputErrorsWhichTheUserSuccessfullyCorrects',
                 'NumberOfAttemptsToCorrectInputErrors',
                 'NumberOfErrorConditionsWhichTheUserSuccessfullyCorrects',
                 'TotalNumberOfErrorConditionsTested',
-                'NumberOfFunctions',
-                'ImplementedWithUserErrorTolerance',
-                'TotalNumberOfFunctions',
-                'RequiringTheToleranceCapability',
+                'NumberOfFunctionsImplementedWithUserErrorTolerance',
+                'TotalNumberOfFunctionsRequiringTheToleranceCapability',
                 'TotalNumberOfIncorrectOperationPatterns',
             ],
             'UserInterfaceAesthethics' => [
@@ -238,8 +235,8 @@ class LoadCharacteristicsData implements FixtureInterface
                 'NumberOfAccessTypes',
                 'NumberOfControllabilityRequirements',
                 'AccessControllability',
-                'CorrectlyEncrypedDecryped',
-                'ToBeRequiredEncryptionDecryption',
+                'NumberOfDataItemsCorrectlyEncrypedDecryped',
+                'NumberOfDataItemsToBeRequiredEncryptionDecryption',
             ],
             'Integrity' => [
                 'OperationTime',
@@ -253,8 +250,7 @@ class LoadCharacteristicsData implements FixtureInterface
             ],
             'NonRepudiation' => [
                 'NumberOfEventsProcessedUsingDigitalSignature',
-                'NumberOfEventsRequiringNon',
-                'RepudiationProperty'
+                'NumberOfEventsRequiringNonRepudiationProperty'
             ],
             'Accountability' => [
                 'NumberOfAccessesToSystemAndDataRecordedInTheSystemLog',
@@ -291,8 +287,7 @@ class LoadCharacteristicsData implements FixtureInterface
                 'HardwareEnvironmentalAdaptability',
                 'SoftwareEnvironmentalAdaptability',
                 'NumberOfOperationalFunctionsOfWhichTasksWereNotCompletedOrAdequated',
-                'TotalNumberOfFunctions',
-                'WhichWereTestedInDifferentEnvironment',
+                'TotalNumberOfFunctionsWhichWereTestedInDifferentEnvironment',
             ],
             'Installability' => [
                 'NumberOfFaults',
