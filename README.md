@@ -11,7 +11,7 @@ docker-compose up -d
 
 Install dependencies
 ```
-docker-compose exec olp_php bash
+docker-compose exec php bash
 composer install
 npm install
 gulp build
